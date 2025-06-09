@@ -7,4 +7,5 @@ Download your reference genome with
 wget https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.fa.gz
 gunzip hg38.fa.gz
 
+Then index the ref genome with 0.3.Index_ref.sh
 
