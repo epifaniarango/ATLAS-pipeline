@@ -1,0 +1,321 @@
+{
+    "__default__" :
+    {
+        "time" : "24:00:00",
+        "mem" : "5000",
+        "out": "log/{rule}.{wildcards}.out",
+        "err": "log/{rule}.{wildcards}.out",
+        "job-name": "default",
+        "cpus-per-task": "1"
+    },
+
+    "all" :
+    {
+        "mem" : "100M",
+        "time": "00:10:00",
+        "job-name": "all"
+    },
+
+    "summary_file" :
+    {
+        "mem" : "100M",
+        "time": "00:10:00",
+        "job-name": "summary"
+    },
+
+    "rawcount" :
+    {
+        "time" : "05:00:00",
+        "mem" : "1G",
+        "job-name": "rawcount"
+    },
+
+    "fastqc" :
+    {
+        "time" : "05:00:00",
+        "mem" : "2G",
+        "job-name": "rawcount",
+        "cpus-per-task": "30"
+    },
+
+    "trim" :
+    {
+        "time" : "24:00:00",
+        "mem" : "30G",
+        "job-name": "trim",
+        "cpus-per-task": "8"
+    },
+
+    "align":
+    {
+        "time" : "24:00:00",
+        "mem"  : "100G",
+        "job-name" : "align",
+        "cpus-per-task": "30"
+    },
+
+    "sort_index":
+    {
+    "time" : "24:00:00",
+        "mem"  : "100G",
+        "job-name" : "sort_index",
+        "cpus-per-task": "30"
+    },
+
+    "newhead":
+    {
+        "time" : "24:00:00",
+        "mem"  : "25G",
+        "job-name" : "newhead",
+	"cpus-per-task": "4"
+    },
+
+    "MkDup_File" :
+    {
+        "mem"  : "120G",
+        "time" : "24:00:00",
+        "job-name" : "MkDup_File",
+        "cpus-per-task": "8"
+    }, 
+
+    "filtering" :
+    {
+        "mem"  : "35G",
+        "time" : "24:00:00",
+        "job-name" : "filtering",
+	"cpus-per-task": "8"
+    },
+
+    "merge":
+    {
+        "time" : "24:00:00",
+        "mem"  : "20G",
+        "job-name" : "merge"
+    },
+
+    "MkDup_sam":
+    {
+        "time" : "24:00:00",
+        "mem"  : "100G",
+        "job-name" : "MkDup_sam", 
+        "cpus-per-task": "8"
+    },
+
+    "FileStats":
+    {
+        "time" : "24:00:00",
+        "mem"  : "8G",
+        "job-name" : "FileStats"
+    },
+
+    "FileCounts":
+    {
+        "time" : "24:00:00",
+        "mem"  : "4G",
+        "job-name" : "FileCounts"
+    },
+
+    "COUNT":
+    {
+        "time" : "24:00:00",
+        "mem"  : "1G",
+        "job-name" : "COUNT"
+    },
+
+    "SamStats":
+    {
+        "time" : "24:00:00",
+        "mem"  : "1G",
+        "job-name" : "SamStats"
+    },
+
+    "TargetCreatorL" :
+    {
+        "mem" : "30G",
+        "time": "10:00:00",
+        "job-name": "TargetCreator",
+        "cpus-per-task": "4"
+    },
+
+    "TargetCreatorT" :
+    {
+        "mem" : "30G",
+        "time": "10:00:00",
+        "job-name": "TargetCreator",
+        "cpus-per-task": "4"
+    },
+
+    "union0T" :
+    {
+        "mem" : "10G",
+        "time": "05:00:00",
+        "job-name": "union0"
+    },
+
+    "union1T" :
+    {
+        "mem" : "60G",
+        "time": "10:00:00",
+        "job-name": "union1"
+    },
+
+    "union1L" :
+    {
+        "mem" : "60G",
+        "time": "10:00:00",
+        "job-name": "union1"
+    },
+
+    "union2T" :
+    {
+        "mem" : "10G",
+        "time": "05:00:00",
+        "job-name": "union2"
+    },
+
+    "union2L" :
+    {
+        "mem" : "10G",
+        "time": "05:00:00",
+        "job-name": "union2"
+    },
+
+    "CreateListT" :
+    {
+        "mem" : "10G",
+        "time": "01:00:00",
+        "job-name": "CreateList"
+    },
+
+    "outlistL" :
+    {
+        "mem" : "10G",
+        "time": "01:00:00",
+        "job-name": "outlist"
+    },
+
+    "LocalRealignmentL" :
+    {
+        "mem" : "60G",
+        "time": "10:00:00",
+        "job-name": "LocalRealignment",
+        "cpus-per-task": "1"
+    },
+
+    "bamdiagnostics" :
+    {
+        "mem" : "20G",
+        "time": "05:00:00",
+        "job-name": "BAMDiagnostics"
+    },
+
+    "mergeL" :
+    {
+        "mem" : "30G",
+        "time": "10:00:00",
+        "job-name": "merge"
+    },
+   "recal" :
+    {
+        "mem" : "120G",
+		"time": "72:00:00",
+        "job-name": "recal",
+        "cpus-per-task": "12"
+    },
+   "splitRG" :
+    {
+        "mem" : "30G",
+        "job-name": "SplitRG"
+    }, 
+
+    "splitMerge" :
+    {
+        "mem" : "120G",
+        "job-name": "splitMerge",
+        "time": "50:00:00"
+    },
+
+    "PMDestimation" :
+    {
+        "mem" : "100G",
+        "time": "48:00:00",
+        "job-name": "PMD"
+    },
+
+    "EstimateTheta":
+    {
+        "time" : "40:00:00",
+        "mem"  : "100G",
+        "job-name" : "Theta"
+    },
+
+    "EstimateGlobalTheta":
+    {
+        "time" : "40:00:00",
+        "mem"  : "192G",
+        "job-name" : "GlobTheta"
+    },
+
+    "callMLE" :
+    {
+        "mem" : "20000",
+        "time" : "50:00:00",
+        "job-name" : "callMLE"
+    },
+    "depthDist" :
+    {
+        "mem" : "20000",
+        "time" : "50:00:00",
+        "job-name" : "depthPerSite"
+    },
+
+    "callBayes":
+    {
+        "time" : "50:00:00",
+        "mem"  : "30G",
+        "job-name" : "Bayes"
+    },
+
+    "AllelePresence":
+    {
+        "time" : "24:00:00",
+        "mem"  : "30G",
+        "job-name" : "AP"
+    },
+
+    "ValidateSam":
+    {
+        "time" : "50:00:00",
+        "mem"  : "30G",
+        "job-name" : "ValidateSam"
+    },
+
+    "Blacklist":
+    {
+        "time" : "50:00:00",
+        "mem"  : "30G",
+        "job-name" : "Blacklist"
+    },
+
+    "MergeReads":
+    {
+        "time" : "50:00:00",
+        "mem"  : "30G",
+        "job-name" : "MergeReads"
+    },
+    
+    "GLF":
+    {
+        "time" : "50:00:00",
+        "mem"  : "30G",
+        "job-name" : "GLF"
+    },
+    
+    "summary":
+    {
+        "time" : "00:10:00",
+        "mem"  : "1G",
+        "job-name" : "GLF"
+    }
+
+}
