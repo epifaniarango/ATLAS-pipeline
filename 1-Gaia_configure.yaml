@@ -1,0 +1,20 @@
+runScript: Gaia  
+
+# 1. samples file
+sampleFile:  /scratch/earang/atlas-pipeline/atlas-pipeline/samples_Gaia.tsv
+
+# 2. programs, references, etc.
+atlas: atlas
+ref:  /scratch/earang/atlas-pipeline/atlas-pipeline/resources/hg38.fa
+
+
+
+#6 how many threads to use when multi-thread is possible?
+threads: 50
+
+
+#8 Java memory - specify the memory allocated for picard-tools MarkDuplicates
+Xmx: -Xmx120G
+
+
+#i put it in /scratch/earang/atlas-pipeline
