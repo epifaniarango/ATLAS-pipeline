@@ -1,0 +1,29 @@
+###############################################
+## Install ATLAS pipeline.
+################################################
+# cd ~/scratch
+mkdir atlas-pipeline
+# # clone pipeline
+     cd atlas-pipeline/
+    git clone https://bitbucket.org/wegmannlab/atlas-pipeline.git 
+    cd atlas-pipeline
+    #Load moduls 
+    module load anaconda3
+    module load gcc
+#Produce a short script to get the enironment running (only once)
+    echo '#!/usr/bin/env bash' > createAtlas.job
+    echo "conda env create -f environment_7.yaml" >> createAtlas.job
+    sbatch --time=24:0:0 --mem=30000 --cpus-per-task=1 createAtlas.job
+    #Check progress by looking at the slurm-XXXXXX.out file (where xxx is the job number)
+    tail -f slurm-*.out
+    
+## activate environment
+source activate ATLAS-Pipeline_7
+
+source activate  ATLAS-Pipeline_7
+mamba install -n ATLAS-Pipeline_7 -c conda-forge armadillo
+mamba install -n ATLAS-Pipeline_7 -c bioconda atlas
+mamba  install -n ATLAS-Pipeline_7  -c conda-forge ncurses
+mamba install -n ATLAS-Pipeline_7 'tabulate=0.8.10'
+
+conda config --set channel_priority strict
