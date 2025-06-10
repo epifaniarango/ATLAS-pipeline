@@ -15,3 +15,5 @@ gunzip hg38.fa.gz
 
 Then index the ref genome with 0.3.Index_ref.sh
 
+
+Now we are ready to start the pipeline. Prepare your samples_Gaia.tsv table!
