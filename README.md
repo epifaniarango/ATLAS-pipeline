@@ -17,3 +17,6 @@ Then index the ref genome with 0.3.Index_ref.sh
 
 
 Now we are ready to start the pipeline. Prepare your samples_Gaia.tsv table!
+The fastq.z needs to have a specific ending, change it like this (this is because the data is single ended, look the manual if yours are not): 
+for f in *.fastq.gz; do mv "$f" "${f%.fastq.gz}_R1_001.fastq.gz"; done
+
