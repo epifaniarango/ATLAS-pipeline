@@ -1,0 +1,23 @@
+# Read gzipped FASTQ file list
+with open("samplelist_fastqc.txt") as f:
+    samples = [line.strip().replace(".fastq.gz", "") for line in f]
+
+# Final targets: compressed output
+rule all:
+    input:
+        expand("dedup/{sample}.fq.gz", sample=samples)
+
+# Clumpify rule
+rule clumpify:
+    input:
+        "{sample}.fastq.gz"
+    output:
+        "dedup/{sample}.fq.gz"
+    params:
+        log_file = "log/clumpify_{sample}.log"
+    threads: 8
+    shell:
+        """
+        clumpify.sh in={input} out={output} dupedist=40 dedupe=t optical=t \
+        zl=6 2>{params.log_file}
+        """
