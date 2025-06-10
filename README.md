@@ -6,6 +6,9 @@ After downloading the fastq file, let's use cumplify to remove optical duplicate
 
 ls *fastq.gz > samplelist_fastqc.txt
 
+Before starting the alignment we are going to remove Optical + exact duplicates with clumpify from Bbmap
+sbatch 0.2.Clumpify.sh
+
 Download your reference genome with
 wget https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.fa.gz
 gunzip hg38.fa.gz
